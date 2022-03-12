@@ -1,0 +1,115 @@
+/* Button style */
+.btn {
+  font-size: 0.8rem;
+  font-family: $font-primary;
+  text-transform: capitalize;
+  padding: .7em 1em;
+  border-radius: 0;
+  border: 1px solid;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+  background-color: $text-color;
+  color: $white;
+  border-radius: 3px;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: none !important;
+    color: $white;
+  }
+
+  &-lg {
+    padding: 0.625rem 1.68rem;
+  }
+
+  &-md {
+    padding: 0.375rem 1.18rem;
+  }
+
+  i {
+    margin-left: .5rem;
+  }
+}
+
+.dark .btn {
+  background-color: darken($text-color, 13.329);
+}
+
+// button primary
+.btn-primary {
+  background: $color-primary;
+  color: $white;
+  border-color: $color-primary;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    background: $color-primary !important;
+    border-color: $color-primary !important;
+  }
+}
+
+
+.btn:hover i {
+  transform: translateX(5px);
+}
+
+.btn i {
+  transition: .3s;
+}
+
+// button outline primary
+.btn-outline-primary {
+  background: transparent;
+  color: $text-color;
+  border-color: $color-primary;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    background: $color-primary !important;
+    border-color: $color-primary !important;
+    color: $white;
+  }
+}
+
+// btn-link
+.btn-link {
+  text-decoration: none;
+  color: $white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $text-color;
+
+  &:hover {
+    color: $text-color;
+  }
+
+  &.back-btn{
+    span{
+      display: inline-block;
+      @include transition(.3s);
+    }
+    &:hover span {
+      transform: translateX(5px);
+    }
+  }
+}
+
+
+.dark .btn-link {
+  color: $text-light;
+
+  &:hover, &:hover span {
+    color: $white;
+  }
+}

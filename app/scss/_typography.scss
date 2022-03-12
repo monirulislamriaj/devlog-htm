@@ -1,0 +1,94 @@
+/*  typography */
+
+html {
+  font-size:  $font-size;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.75;
+  color: $text-color;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+h1{
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  color: $text-dark;
+  text-transform: capitalize;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+small,
+.small {
+  font-size: 0.8rem;
+}
+
+
+
+
+// List in descending order to prevent extra sort function
+$type-levels: 6, 5, 4, 3, 2, 1;
+
+// Create map with h[x] as key
+$level-size: $font-size;
+@each $level in $type-levels {
+  $level-size: $level-size * $font-scale;
+  // Output heading styles
+  h#{$level},
+  .h#{$level} {
+    font-size: $level-size;
+    line-height: calc(2px + 2ex + 2px);
+    margin-bottom: 0.5em;
+
+     // font size for h2, h3, h4, h5, h6
+     &:not(h1, .h1) {
+      font-size: calc( #{$level-size} * .95);
+    }
+    
+  }
+}
+
+
+body.dark {
+  color: $text-light;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dark-text-dark;
+  }
+}
+.display-1{
+  font-size: 13.33rem !important;
+  
+  @include desktop{
+    font-size: 10.33rem !important;
+  }
+
+  small{
+    font-size: 1.8rem;
+    margin-left: -2rem;
+  }
+}

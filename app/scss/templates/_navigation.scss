@@ -1,0 +1,83 @@
+.nav .nav-link {
+  color: $text-dark;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.nav .nav-link i {
+  margin-left: 0.6rem;
+}
+
+.submenu {
+  background-color: $text-color;
+  padding: 0.6rem 2rem;
+  border-radius: 3px;
+
+  li {
+    list-style: none;
+  }
+
+  .nav-link {
+    color: $white;
+  }
+
+  a.nav-link.active,
+  a.nav-link:hover {
+    background-color: $black;
+  }
+}
+
+#menu {
+  li {
+    a {
+      i {
+        transition: 0.3s;
+      }
+
+      &:hover {
+        .fa-arrow-right {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+
+
+.nav-pills .nav-link {
+  padding: 0.6rem 1.5rem !important;
+  margin-bottom: 0.6rem;
+  transition: .3s;
+
+  &.active,
+  &:hover {
+    background-color: $text-color;
+    color: $white;
+  }
+}
+
+
+.dark {
+  .nav .nav-link {
+    color: $white;
+  }
+
+  .nav-pills .nav-link {
+
+    &.active,
+    &:hover {
+      background-color: $black;
+    }
+  }
+
+  .submenu {
+    background: $black;
+
+    a.nav-link.active,
+    a.nav-link:hover {
+      background-color: $text-color;
+    }
+  }
+}

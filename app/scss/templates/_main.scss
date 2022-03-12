@@ -1,0 +1,66 @@
+.post-meta {
+
+  li,
+  a {
+    color: $text-color;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  &.tags li a {
+    color: lighten($text-color, 13.33);
+
+    &:hover {
+      color: $text-color !important;
+    }
+  }
+}
+
+.post-title a {
+  color: $text-dark;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.designation {
+  color: $text-color;
+}
+
+.dark {
+  .post-title a {
+    color: $white;
+  }
+
+  .post-meta {
+
+    li,
+    a {
+      color: $text-light;
+    }
+
+    &.tags li a {
+      color: lighten($text-color, 26.66);
+
+      &:hover {
+        color: $white !important;
+      }
+    }
+  }
+
+  .designation {
+    color: $text-light !important;
+  }
+
+}
+
+// 404
+.error-content {
+  margin-top: -9rem;
+
+  @include desktop {
+    margin-top: 0rem;
+  }
+}

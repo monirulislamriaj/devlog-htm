@@ -1,0 +1,155 @@
+body.dark {
+  background-color: $dark-body-color;
+}
+
+// theme switch
+.switch {
+  cursor: pointer;
+  margin-left: 20px;
+
+  .sun {
+    opacity: 0;
+  }
+
+  .moon,
+  .sun {
+    transition: 0.35s;
+  }
+}
+
+.dark .switch {
+  svg {
+    stroke: $white;
+  }
+
+  .sun {
+    opacity: 1;
+  }
+
+  .moon {
+    opacity: 0;
+  }
+}
+
+// content
+.dark {
+  .btn-primary {
+    background-color: darken($text-color, 13.329);
+    color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: darken($text-color, 13.329) !important;
+    }
+  }
+
+  [type=checkbox]:checked+label,
+  [type=checkbox]:not(:checked)+label {
+    color: $white;
+  }
+
+  [type=checkbox]:checked+label:after,
+  [type=checkbox]:not(:checked)+label:after {
+    background: $white;
+  }
+
+  .page-link {
+    color: $text-light;
+    border-color: $border-color;
+
+    &:focus {
+      background-color: darken($text-color, 6.61);
+    }
+  }
+
+  .content {
+    ul li {
+      a {
+        color: $text-light;
+      }
+
+      &::before {
+        background: $text-light;
+      }
+    }
+
+    .list-inline li::before {
+      display: none;
+    }
+
+    blockquote {
+      background-color: darken( $text-color, 26.6);
+      color: $text-light;
+    }
+
+    .notices.note p {
+      background: rgba(#6AB0DE, 0.15);
+    }
+
+    .notices.tip p {
+      background: rgba(#78C578, 0.15);
+    }
+
+    .notices.info p {
+      background: rgba(#F0B37E, 0.15);
+    }
+
+    .notices.warning p {
+      background: rgba(#E06F6C, 0.15);
+    }
+
+    .nav-tabs li .nav-link {
+      color: $text-light;
+      border-color: $dark-border-color;
+
+      &.active {
+        border-color: transparent;
+      }
+    }
+
+    .nav-tabs li .nav-link.active,
+    .nav-tabs li .nav-link:hover,
+    .tab-content {
+      background-color: darken( $text-color, 26.6);
+    }
+  }
+
+  .breadcrumb .breadcrumb-item{
+    a {
+      color: $white;
+    }
+    &.active {
+      color:  $text-light;
+    }
+  }
+
+  .accordion-button {
+    color: $dark-text-dark;
+
+    &.collapsed {
+      background-color: darken( $text-color, 26.6);
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: $white;
+  }
+
+  thead {
+    background: darken( $text-color, 26.6);
+
+    th {
+      color: $white;
+    }
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background-color: darken( $text-color, 19.99);
+    }
+
+    tr:nth-child(even) {
+      background-color: darken($text-color, 13.329);
+    }
+  }
+}
